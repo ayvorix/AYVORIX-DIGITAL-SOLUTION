@@ -1,0 +1,11 @@
+# robots.txt for https://www.ayvorix.com
+User-agent: *
+Allow: /
+
+# Exclude private paths
+Disallow: /assets/css/
+Disallow: /assets/js/
+Disallow: /pages/404.html
+
+# Sitemap location
+Sitemap: https://www.ayvorix.com/sitemap.xml

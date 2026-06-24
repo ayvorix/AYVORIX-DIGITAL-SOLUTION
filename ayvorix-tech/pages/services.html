@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services | AYVORIX</title>
+  <meta name="description" content="Explore our premium services: high-performance landing pages, custom SaaS applications, modern e-commerce architectures, UI/UX prototyping, and AI api integrations.">
+  <link rel="icon" type="image/x-icon" href="../assets/favicon/favicon.ico">
+  <link rel="manifest" href="../site.webmanifest">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  
+  <!-- Theme Manager -->
+  <script src="../assets/js/theme.js"></script>
+</head>
+<body>
+
+  <!-- Premium Page Loader -->
+  <div id="loader" class="page-loader">
+    <div class="loader-content">
+      <img src="../assets/logos/ayvorix-logo-dark.png" alt="AYVORIX" class="loader-logo">
+      <div class="loader-bar"></div>
+    </div>
+  </div>
+
+  <!-- Sticky Glassmorphism Header -->
+  <header class="header-nav" data-component="Navbar">
+    <div class="container">
+      <a href="../index.html" class="logo" aria-label="AYVORIX Home">
+        <img src="../assets/logos/ayvorix-logo-dark.png" alt="AYVORIX" class="logo-img">
+      </a>
+      
+      <nav class="nav-menu" aria-label="Main Navigation">
+        <a href="../index.html" class="nav-link">Home</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="portfolio.html" class="nav-link">Portfolio</a>
+        <a href="pricing.html" class="nav-link">Pricing</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="theme-toggle-btn" aria-label="Switch Theme">
+          <svg class="sun" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m12.728 12.728l.707.707M12 8a4 4 0 100 8 4 4 0 000-8z"/></svg>
+          <svg class="moon" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+        </button>
+        <a href="contact.html" class="btn btn-primary btn-magnetic hidden md-flex">Book Call</a>
+        <button class="hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileNav">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div id="mobileNav" class="mobile-nav" aria-label="Mobile Navigation">
+    <a href="../index.html" class="mobile-nav-link">Home</a>
+    <a href="services.html" class="mobile-nav-link">Services</a>
+    <a href="portfolio.html" class="mobile-nav-link">Portfolio</a>
+    <a href="pricing.html" class="mobile-nav-link">Pricing</a>
+    <a href="about.html" class="mobile-nav-link">About</a>
+    <a href="contact.html" class="mobile-nav-link">Contact</a>
+    <a href="contact.html" class="btn btn-primary mt-4" style="width: 200px;">Book Call</a>
+  </div>
+
+  <main>
+    
+    <!-- Services Page Hero -->
+    <section class="services-hero">
+      <div class="hero-glow-1"></div>
+      <div class="hero-glow-2"></div>
+      <div class="container text-center reveal-fade-up">
+        <span class="tag">What AYVORIX Delivers</span>
+        <h1 class="hero-title" style="font-size: 3rem;">The AYVORIX Service Suite</h1>
+        <p class="hero-subtitle">From landing pages to full-scale web applications — every product is built to the AYVORIX standard.</p>
+      </div>
+    </section>
+
+    <!-- Detailed Services Grid -->
+    <section class="section">
+      <div class="container">
+        <div class="services-intro reveal-fade-up text-center mb-12">
+          <span class="tag">AYVORIX Capabilities</span>
+          <h2>Built With The AYVORIX Approach</h2>
+          <p class="text-secondary mt-4">Every service we deliver is backed by our obsession with performance, clean code, and design excellence.</p>
+        </div>
+        
+        <style>
+          .detailed-services-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-8);
+          }
+          @media (min-width: 640px) {
+            .detailed-services-grid { grid-template-columns: repeat(2, 1fr); }
+          }
+          @media (min-width: 1024px) {
+            .detailed-services-grid { grid-template-columns: repeat(3, 1fr); }
+          }
+          .detailed-service-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            padding: var(--space-8);
+            border-radius: var(--radius-lg);
+            transition: all var(--transition-normal);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+          }
+          .detailed-service-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--brand-primary);
+            box-shadow: var(--shadow-md);
+          }
+          .detailed-service-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: var(--radius-sm);
+            background-color: var(--accent-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--brand-primary);
+            margin-bottom: var(--space-6);
+          }
+          .detailed-service-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: var(--space-3);
+          }
+          .detailed-service-desc {
+            font-size: 0.9375rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+          }
+        </style>
+        
+        <div class="detailed-services-grid">
+          <!-- 1. Premium Landing Pages -->
+          <div class="detailed-service-card reveal-fade-up">
+            <div class="detailed-service-icon">
+              <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            </div>
+            <h3 class="detailed-service-title">Premium Landing Pages</h3>
+            <p class="detailed-service-desc">Stunning, fast-loading, and high-conversion landing experiences designed to project authority and capture interest.</p>
+          </div>
+          <!-- 2. Business Websites -->
+          <div class="detailed-service-card reveal-fade-up delay-100">
+            <div class="detailed-service-icon">
+              <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+            </div>
+            <h3 class="detailed-service-title">Business Websites</h3>
+            <p class="detailed-service-desc">Robust, highly professional multi-page websites designed to establish your corporate presence online with speed and style.</p>
+          </div>
+          <!-- 3. Portfolio Websites -->
+          <div class="detailed-service-card reveal-fade-up delay-200">
+            <div class="detailed-service-icon">
+              <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+            </div>
+            <h3 class="detailed-service-title">Portfolio Websites</h3>
+            <p class="detailed-service-desc">Immersive, visually-rich digital portfolios for creators, studios, and professionals wanting to showcase their work.</p>
+          </div>
+          <!-- 4. E-Commerce Websites -->
+          <div class="detailed-service-card reveal-fade-up">
+            <div class="detailed-service-icon">
+              <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+            </div>
+            <h3 class="detailed-service-title">E-Commerce Websites</h3>
+            <p class="detailed-service-desc">Modern e-commerce stores with optimized checkout flows, lightning-fast product filtering, and scalable systems.</p>
+          </div>
+          <!-- 5. Custom Web Applications -->
+          <div class="detailed-service-card reveal-fade-up delay-100">
+            <div class="detailed-service-icon">
+              <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+            </div>
+            <h3 class="detailed-service-title">Custom Web Applications</h3>
+            <p class="detailed-service-desc">Bespoke dashboards, specialized tooling, and custom frontend platforms built to solve unique business challenges.</p>
+          </div>
+          <!-- 6. UI/UX Design -->
+          <div class="detailed-service-card reveal-fade-up delay-200">
+            <div class="detailed-service-icon">
+              <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/></svg>
+            </div>
+            <h3 class="detailed-service-title">UI/UX Design</h3>
+            <p class="detailed-service-desc">Bespoke wireframing, component libraries, and interactive high-fidelity Figma prototypes constructed on a strict layout grid.</p>
+          </div>
+          <!-- 7. Website Redesign -->
+          <div class="detailed-service-card reveal-fade-up">
+            <div class="detailed-service-icon">
+              <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 1121.21 8H17.29"/></svg>
+            </div>
+            <h3 class="detailed-service-title">Website Redesign</h3>
+            <p class="detailed-service-desc">Transforming legacy platforms with a modern layout, speed optimizations, responsive architecture, and luxury styling.</p>
+          </div>
+          <!-- 8. Website Maintenance -->
+          <div class="detailed-service-card reveal-fade-up delay-100">
+            <div class="detailed-service-icon">
+              <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+            </div>
+            <h3 class="detailed-service-title">Website Maintenance</h3>
+            <p class="detailed-service-desc">Continuous performance audits, dependency updates, security patches, and support to ensure your codebase stays elite.</p>
+          </div>
+          <!-- 9. AI-Powered Web Solutions -->
+          <div class="detailed-service-card reveal-fade-up delay-200">
+            <div class="detailed-service-icon">
+              <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+            </div>
+            <h3 class="detailed-service-title">AI-Powered Web Solutions</h3>
+            <p class="detailed-service-desc">Connecting LLMs, custom endpoints, vector databases, and secure proxies into interactive web applications.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer" data-component="Footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../index.html" class="logo" style="margin-bottom: var(--space-2)">
+            <img src="../assets/logos/ayvorix-logo-dark.png" alt="AYVORIX" class="logo-img">
+          </a>
+          <p class="footer-brand-name">AYVORIX</p>
+          <p class="footer-tagline">Crafting Digital Futures</p>
+          <p class="footer-desc">A premium web development studio building high-performance digital products for modern businesses and startups.</p>
+          <div class="social-links">
+            <a href="https://www.instagram.com/ayvorix" target="_blank" rel="noopener" class="social-link" aria-label="Instagram"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+            <a href="https://www.linkedin.com/in/ayvorix-tech-47338a419/" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+            <a href="https://github.com/ayvorix" target="_blank" rel="noopener" class="social-link" aria-label="GitHub"><svg fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.579.688.481C19.138 20.161 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg></a>
+          </div>
+        </div>
+
+        <div class="footer-links-col">
+          <h3 class="footer-links-title">Services</h3>
+          <ul class="footer-links">
+            <li><a href="services.html" class="footer-link">Landing Pages</a></li>
+            <li><a href="services.html" class="footer-link">Web Applications</a></li>
+            <li><a href="services.html" class="footer-link">UI/UX Design</a></li>
+            <li><a href="services.html" class="footer-link">AI Customizations</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-col">
+          <h3 class="footer-links-title">Company</h3>
+          <ul class="footer-links">
+            <li><a href="about.html" class="footer-link">About Us</a></li>
+            <li><a href="portfolio.html" class="footer-link">Our Work</a></li>
+            <li><a href="pricing.html" class="footer-link">Pricing Plans</a></li>
+            <li><a href="contact.html" class="footer-link">Get in Touch</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-newsletter">
+          <h3 class="footer-links-title">Newsletter</h3>
+          <p>Get insights on technology design and scaling roadmaps weekly.</p>
+          <form class="newsletter-form">
+            <input type="email" class="newsletter-input" placeholder="you@example.com" required aria-label="Email Address">
+            <button type="submit" class="btn btn-primary newsletter-btn">Subscribe</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span class="footer-copyright">© 2026 AYVORIX. All rights reserved.</span>
+        <div class="footer-legal-links">
+          <a href="privacy-policy.html" class="footer-legal-link">Privacy Policy</a>
+          <a href="terms.html" class="footer-legal-link">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script Modules -->
+  <script src="../assets/js/navbar.js"></script>
+  <script src="../assets/js/animations.js"></script>
+  <script src="../assets/js/faq.js"></script>
+  <script src="../assets/js/portfolio.js"></script>
+  <script src="../assets/js/main.js"></script>
+
+</body>
+</html>
