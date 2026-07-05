@@ -21,30 +21,8 @@
 
 @media (min-width: 1024px) {
   .process-grid {
-    grid-template-columns: repeat(5, 1fr);
-    gap: var(--space-4);
-  }
-}
-
-/* Connective line for desktop */
-@media (min-width: 1024px) {
-  .process-grid::before {
-    content: '';
-    position: absolute;
-    top: 51px;
-    left: 8%;
-    width: 84%;
-    height: 2px;
-    background: linear-gradient(90deg, 
-      var(--border-color) 0%, 
-      var(--brand-primary) 30%, 
-      var(--accent-primary) 50%, 
-      var(--brand-primary) 70%, 
-      var(--border-color) 100%
-    );
-    background-size: 200% auto;
-    animation: slideLine 4s linear infinite;
-    z-index: 1;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-6);
   }
 }
 

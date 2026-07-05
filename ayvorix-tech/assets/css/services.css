@@ -112,12 +112,17 @@
   color: var(--brand-primary);
   gap: var(--space-1);
   transition: color var(--transition-fast), gap var(--transition-fast);
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: inherit;
 }
 
 .service-card-link svg {
   width: 16px;
   height: 16px;
-  transition: transform var(--transition-fast);
+  transition: transform var(--transition-normal);
 }
 
 .service-card:hover .service-card-link {
@@ -126,6 +131,50 @@
 
 .service-card:hover .service-card-link svg {
   transform: translateX(4px);
+}
+
+/* Service card interactive expansion */
+.service-card-expanded-content {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.6s var(--ease-apple), opacity 0.6s var(--ease-apple), margin-top 0.6s var(--ease-apple), padding-top 0.6s var(--ease-apple);
+  margin-top: 0;
+  width: 100%;
+}
+
+.service-card.is-expanded .service-card-expanded-content {
+  max-height: 500px;
+  opacity: 1;
+  margin-top: var(--space-4);
+  padding-top: var(--space-4);
+  border-top: 1px dashed var(--border-color);
+}
+
+.service-card.is-expanded .service-card-link svg {
+  transform: rotate(90deg) !important;
+}
+
+.expanded-feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.expanded-feature-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.expanded-feature-item svg {
+  color: var(--accent-primary);
+  flex-shrink: 0;
 }
 
 /* Service Detail Page CSS overrides/additions */
@@ -285,3 +334,201 @@
 [data-theme="dark"] .tech-tag:hover {
   background-color: var(--accent-light);
 }
+
+/* Tech Stack & Why Choose Us Custom Styles */
+.tech-stack-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-4);
+  margin-top: var(--space-8);
+}
+
+@media (min-width: 640px) {
+  .tech-stack-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .tech-stack-grid {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+}
+
+.tech-stack-item {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: var(--space-6) var(--space-4);
+  text-align: center;
+  transition: all var(--transition-normal);
+}
+
+.tech-stack-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  background: radial-gradient(
+    300px circle at var(--x, 0px) var(--y, 0px),
+    rgba(124, 58, 237, 0.08),
+    transparent 40%
+  );
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+
+[data-theme="dark"] .tech-stack-item::before {
+  background: radial-gradient(
+    300px circle at var(--x, 0px) var(--y, 0px),
+    rgba(139, 92, 246, 0.12),
+    transparent 40%
+  );
+}
+
+.tech-stack-item:hover::before {
+  opacity: 1;
+}
+
+.tech-stack-item > * {
+  position: relative;
+  z-index: 2;
+}
+
+.tech-stack-item:hover {
+  border-color: var(--brand-primary);
+  box-shadow: var(--shadow-md);
+}
+
+.tech-icon-wrapper {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto var(--space-3) auto;
+  color: var(--brand-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tech-icon-wrapper svg {
+  width: 32px;
+  height: 32px;
+}
+
+.tech-name {
+  font-family: var(--font-primary);
+  font-weight: 600;
+  font-size: 0.9375rem;
+  color: var(--text-primary);
+}
+
+.tech-status {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  margin-top: var(--space-1);
+}
+
+/* Why Choose Us Cards */
+.why-ayvorix-grid {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: var(--space-8);
+  margin-top: var(--space-12);
+}
+
+@media (min-width: 768px) {
+  .why-ayvorix-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .why-ayvorix-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.why-card {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: var(--space-8);
+  transition: all var(--transition-normal);
+}
+
+.why-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  background: radial-gradient(
+    400px circle at var(--x, 0px) var(--y, 0px),
+    rgba(124, 58, 237, 0.06),
+    transparent 45%
+  );
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+
+[data-theme="dark"] .why-card::before {
+  background: radial-gradient(
+    400px circle at var(--x, 0px) var(--y, 0px),
+    rgba(139, 92, 246, 0.1),
+    transparent 45%
+  );
+}
+
+.why-card:hover::before {
+  opacity: 1;
+}
+
+.why-card > * {
+  position: relative;
+  z-index: 2;
+}
+
+.why-card:hover {
+  border-color: var(--brand-primary);
+  box-shadow: var(--shadow-lg);
+}
+
+.why-badge-num {
+  font-family: var(--font-heading);
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: var(--accent-light);
+  line-height: 1;
+  margin-bottom: var(--space-4);
+  background: linear-gradient(135deg, var(--brand-primary), var(--accent-primary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.why-title {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: var(--space-2);
+}
+
+.why-desc {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
